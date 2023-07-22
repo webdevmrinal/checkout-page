@@ -10,3 +10,26 @@
 body {
   font-family: "Open Sans", sans-serif;
 }
+
+p {
+  color: #595959;
+}
+
+@layer components {
+  .inputContainer {
+    @apply w-full my-10 outline outline-1 outline-[#474747]/30 rounded-xl relative;
+  }
+  .hoverText {
+    @apply px-1 text-xs text-[#595959] absolute top-0 translate-x-4 -translate-y-2 bg-white;
+  }
+  .inputBox {
+    @apply px-4 py-4 w-full rounded-lg focus:outline-none ; 
+    /* focus:outline-blue-500 */
+  }
+  .inputErrorMessage {
+    @apply block text-xs absolute bottom-0 translate-x-2 translate-y-5 text-[#C22F00];
+  }
+  .errorInputContainer {
+    @apply w-full my-10 outline outline-1 outline-[#C22F00] rounded-xl relative;
+  }
+}

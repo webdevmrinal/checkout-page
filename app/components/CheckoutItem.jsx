@@ -1,13 +1,13 @@
 import React from "react";
 import Image from "next/image";
-import variant from "../../public/icons/Vector.svg";
-import date from "../../public/icons/Vector-13.svg";
-import time from "../../public/icons/Vector-2.svg";
+import variant from "../../public/icons/Ticket.svg";
+import date from "../../public/icons/CalendarBlank.svg";
+import time from "../../public/icons/Clock.svg";
 import discount from "../../public/icons/Vector-3.svg";
 
 function CheckoutItem() {
   return (
-    <div className="max-w-xs mx-auto border-b-2">
+    <div className="max-w-xs mx-auto">
       <h1 className="font-semibold text-4xl my-6">{"Confirm and pay"}</h1>
       <Image
         className="my-4 rounded-lg"
@@ -23,15 +23,15 @@ function CheckoutItem() {
       </p>
       <div className="space-y-2 pb-6 border-b">
         <div className="flex gap-4">
-          <Image src={variant} alt="variant-icon" height={20} width={20} />
+          <Image src={variant} alt="variant-icon" height={25} width={25} />
           <p className="text-sm font-semibold">{"<variant name>"}</p>
         </div>
         <div className="flex gap-4">
-          <Image src={date} alt="date-icon" height={20} width={20} />
+          <Image src={date} alt="date-icon" height={25} width={25} />
           <p className="text-sm font-semibold">{"<date>"}</p>
         </div>
         <div className="flex gap-4">
-          <Image src={time} alt="time-icon" height={20} width={20} />
+          <Image src={time} alt="time-icon" height={25} width={25} />
           <p className="text-sm font-semibold">{"<time>"}</p>
         </div>
       </div>
