@@ -4,6 +4,8 @@ import Details from "./components/Details";
 import AdditionalInfo from "./components/AdditionalInfo";
 import SelectPaymentMode from "./components/SelectPaymentMode";
 import FAQ from "./components/FAQ";
+import TrustBooster from "./components/TrustBooster";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -25,6 +27,12 @@ export default function Home() {
       </section>
       <section>
         <FAQ />
+      </section>
+      <section>
+        <TrustBooster />
+      </section>
+      <section className="bg-black">
+        <Footer />
       </section>
     </>
   );

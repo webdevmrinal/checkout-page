@@ -37,7 +37,7 @@ function SelectPaymentMode() {
             <input
               className="accent-black"
               type="radio"
-              name="credit-debit-card"
+              name="payment-mode"
               id="credit-debit-card"
             />
           </div>
@@ -146,7 +146,7 @@ function SelectPaymentMode() {
             {"Klarna"}
           </label>
         </div>
-        <input className="accent-black" type="radio" name="" id="klarna" />
+        <input className="accent-black" type="radio" name="payment-mode" id="klarna" />
       </div>
       <div>
         <h3 className="font-semibold text-lg py-2">{"Total: <price>"}</h3>
