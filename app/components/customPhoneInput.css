@@ -29,6 +29,7 @@
 }
 .PhoneInputInput {
   padding-left: 0.5em !important;
+  width: 85% !important;
 }
 .PhoneInputInput:focus {
   outline: none !important;

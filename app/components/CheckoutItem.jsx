@@ -7,10 +7,10 @@ import discount from "../../public/icons/Vector-3.svg";
 
 function CheckoutItem() {
   return (
-    <div className="max-w-xs mx-auto">
-      <h1 className="font-semibold text-4xl my-6">{"Confirm and pay"}</h1>
+    <div className="max-w-xs lg:ml-4 lg:flex-0">
+      <h1 className="font-semibold text-4xl my-6 lg:hidden">{"Confirm and pay"}</h1>
       <Image
-        className="my-4 rounded-lg"
+        className="my-4 rounded-lg lg:my-0"
         src={"https://source.unsplash.com/random/500x300"}
         alt="product-image"
         height={300}

@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -8,8 +9,8 @@ import klarnaIcon from "../../public/icons/Klarna.svg";
 
 function SelectPaymentMode() {
   return (
-    <div className="max-w-xs mx-auto">
-      <h2 className="font-semibold text-lg pb-2">
+    <div className="">
+      <h2 className="font-semibold text-lg pb-2 lg:text-2xl">
         {"Select your mode of payment"}
       </h2>
       <p className="text-sm ">
@@ -38,59 +39,65 @@ function SelectPaymentMode() {
               className="accent-black"
               type="radio"
               name="payment-mode"
-              id="credit-debit-card"
-            />
+              id="credit-debit-card"            />
           </div>
-          <div className="inputContainer my-2">
-            <span className="hoverText">{"Name on Card"}</span>
-            <input
-              className="inputBox"
-              type="text"
-              placeholder="<name on card>"
-            />
-            <span className={`${false ? "inputErrorMessage" : "hidden"}`}>
-              {"<error message>"}
-            </span>
+          <div className="lg:flex lg:space-x-6">
+            <div className="inputContainer my-2 lg:my-4">
+              <span className="hoverText">{"Name on Card"}</span>
+              <input
+                className="inputBox"
+                type="text"
+                placeholder="<name on card>"
+                onChange={()=>{}}
+              />
+              <span className={`${true ? "inputErrorMessage" : "hidden"}`}>
+                {"<error message>"}
+              </span>
+            </div>
+            <div className="inputContainer">
+              <span className="hoverText">{"Card Number"}</span>
+              <Image
+                className="absolute mx-2 right-0 top-1/2 -translate-y-1/2"
+                src={visaIcon}
+                alt=""
+                height={40}
+                width={40}
+              />
+              <input
+                className="inputBox"
+                type="text"
+                placeholder="<Card Number>"
+                onChange={()=>{}}
+              />
+              <span className={`${false ? "inputErrorMessage" : "hidden"}`}>
+                {"<error message>"}
+              </span>
+            </div>
           </div>
-          <div className="inputContainer">
-            <span className="hoverText">{"Card Number"}</span>
-            <Image
-              className="absolute mx-2 right-0 top-1/2 -translate-y-1/2"
-              src={visaIcon}
-              alt=""
-              height={40}
-              width={40}
-            />
-            <input
-              className="inputBox"
-              type="text"
-              placeholder="<Card Number>"
-            />
-            <span className={`${false ? "inputErrorMessage" : "hidden"}`}>
-              {"<error message>"}
-            </span>
-          </div>
-          <div className="inputContainer">
-            <span className="hoverText">{"Expiry Date"}</span>
-            <input className="inputBox" type="text" placeholder="MM/YY" />
-            <span className={`${false ? "inputErrorMessage" : "hidden"}`}>
-              {"<error message>"}
-            </span>
-          </div>
-          <div className="inputContainer my-8">
-            <span className="hoverText">{"CVV/CVC"}</span>
-            <input
-              className="inputBox"
-              type="password"
-              placeholder="<CVV/CVC>"
-            />
-            <span className={`${false ? "inputErrorMessage" : "hidden"}`}>
-              {"<error message>"}
-            </span>
+          <div className="lg:flex lg:space-x-6">
+            <div className="inputContainer lg:my-8">
+              <span className="hoverText">{"Expiry Date"}</span>
+              <input className="inputBox" type="text" placeholder="MM/YY" onChange={()=>{}}/>
+              <span className={`${false ? "inputErrorMessage" : "hidden"}`}>
+                {"<error message>"}
+              </span>
+            </div>
+            <div className="inputContainer my-8">
+              <span className="hoverText">{"CVV/CVC"}</span>
+              <input
+                className="inputBox"
+                type="password"
+                placeholder="<CVV/CVC>"
+                onChange={()=>{}}
+              />
+              <span className={`${false ? "inputErrorMessage" : "hidden"}`}>
+                {"<error message>"}
+              </span>
+            </div>
           </div>
         </div>
         <div>
-          <h3 className="font-semibold text-lg py-2">{"Total: <price>"}</h3>
+          <h3 className="font-semibold text-lg py-2 lg:text-2xl">{"Total: <price>"}</h3>
           <p className="text-xs underline decoration-[#474747]/70 pb-4">
             {"You will pay in <currency>"}
           </p>
@@ -120,9 +127,9 @@ function SelectPaymentMode() {
           </Link>
           .
         </p>
-        <button className="w-full bg-[#0A0A0A] mb-2 py-4 rounded-xl">
+        <button className="w-full lg:w-1/3 bg-[#0A0A0A] mb-2 py-4 lg:py-3 rounded-xl">
           <span className="font-semibold text-base text-[#F6F6F7] px-2">
-            Confirm and pay
+            {"Confirm and pay"}
           </span>
           <Image
             className="inline-block"
@@ -149,7 +156,7 @@ function SelectPaymentMode() {
         <input className="accent-black" type="radio" name="payment-mode" id="klarna" />
       </div>
       <div>
-        <h3 className="font-semibold text-lg py-2">{"Total: <price>"}</h3>
+        <h3 className="font-semibold text-lg py-2 lg:text-2xl">{"Total: <price>"}</h3>
         <p className="text-xs underline decoration-[#474747]/70 pb-4">
           {"You will pay in <currency>"}
         </p>
